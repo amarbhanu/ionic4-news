@@ -1,0 +1,35 @@
+
+
+<ion-header>
+    <ion-toolbar>     
+
+       <ion-buttons slot="start">
+         <ion-button color="dark" (click)="goBack()">
+           <ion-icon name="arrow-back"></ion-icon>
+         </ion-button>
+       </ion-buttons>
+
+        <ion-title>page-detail</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content  padding class="masters">
+	<ion-card>
+		<img [src]="pageDataList.image"/>
+	</ion-card>
+	<ion-card>
+		<ion-card-header>
+		    {{pageDataList.name}}
+		</ion-card-header>
+		<ion-card-content>
+			{{pageDataList.description}}
+		</ion-card-content>
+ 
+
+	</ion-card>
+
+	<ion-card>
+		<a href="https://devdactic.com/" target="_blank"><img src="../assets/imgs/proteinbar-chocolate.jpg" alt="your image"></a>
+	</ion-card>
+
+</ion-content>

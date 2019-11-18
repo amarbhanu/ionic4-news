@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            List
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<!--
+
+    <ion-content>
+    <ion-list>
+        <ion-item *ngFor="let item of items">
+            <ion-icon [name]="item.icon" slot="start"></ion-icon>
+            {{item.title}} +++++++++++++++
+            <div class="item-note" slot="end">
+                {{item.note}}
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+goToPageDetails
+ (click)="goToPageDetails(product)" 
+-->
+
+<ion-content  padding class="masters" >
+   <ion-card *ngFor="let product of allProducts" (click)="goToPageDetails(product.item_id)" >     
+    <ion-card>  <img [src]="product.image"/> 
+   </ion-card>
+    <ion-card-content>
+        {{product.short_desc}}
+        {{product.item_id}}             
+    </ion-card-content> 
+
+    
+  </ion-card>
+</ion-content>
+
+ 
